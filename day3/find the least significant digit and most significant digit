@@ -1,0 +1,10 @@
+def get_digits(number):
+    lsd = number % 10
+    msd = int(str(number)[0])
+    return lsd, msd
+
+# Example usage:
+number = 12345
+lsd, msd = get_digits(number)
+print("Least Significant Digit:", lsd)  # Output: 5
+print("Most Significant Digit:", msd)  # Output: 1
