@@ -1,0 +1,6 @@
+numbers = list(map(int, input("Enter numbers separated by spaces: ").split()))
+counts = {}
+for num in numbers:
+    counts[num] = counts.get(num, 0) + 1
+duplicates = {num: count for num, count in counts.items() if count > 1}
+print("Duplicate elements and their counts:", duplicates)
