@@ -1,0 +1,3 @@
+S=”we all are good”
+Length=lencs.split()[-1]
+Print(length)
