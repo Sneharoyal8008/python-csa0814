@@ -1,0 +1,8 @@
+def simple_interest(principal, rate, time=1):
+    return principal * rate * time / 100
+
+# Example usage:
+p = 1000
+r = 5
+si = simple_interest(p, r)  # time defaults to 1
+print("Simple Interest:", si)
