@@ -1,0 +1,4 @@
+Num=[1,2,3,4,5]
+Sum-even=sum(x**2 for x in num if x%2==0)
+Sum-odd=sum(x**2 for x in num if x%2!=0)
+Print(“even”, sumeven,”odd” sum.odd)
