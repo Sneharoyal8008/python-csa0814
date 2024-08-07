@@ -1,0 +1,9 @@
+def first_and_second_highest(arr):
+    unique_sorted = sorted(set(arr), reverse=True)
+    return unique_sorted[0], unique_sorted[1] if len(unique_sorted) > 1 else (unique_sorted[0], None)
+
+# Example usage:
+arr = [10, 20, 4, 45, 99, 99]
+first, second = first_and_second_highest(arr)
+print("First Highest:", first)
+print("Second Highest:", second)
