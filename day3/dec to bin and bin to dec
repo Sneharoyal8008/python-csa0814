@@ -1,0 +1,11 @@
+def dec_to_bin(decimal):
+    return bin(decimal)[2:]  # [2:] to remove the '0b' prefix
+
+def bin_to_dec(binary):
+    return int(binary, 2)
+
+# Example usage:
+decimal_number = 10
+binary_number = '1010'
+print("Decimal to Binary:", dec_to_bin(decimal_number))
+print("Binary to Decimal:", bin_to_dec(binary_number))
