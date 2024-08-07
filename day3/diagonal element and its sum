@@ -1,0 +1,9 @@
+def diagonal_elements_and_sum(matrix):
+    diag_elements = [matrix[i][i] for i in range(len(matrix))]
+    return diag_elements, sum(diag_elements)
+
+# Example usage:
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+diag_elements, diag_sum = diagonal_elements_and_sum(matrix)
+print("Diagonal Elements:", diag_elements)
+print("Sum of Diagonal Elements:", diag_sum)
