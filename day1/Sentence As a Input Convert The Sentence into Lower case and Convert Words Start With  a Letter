@@ -1,0 +1,2 @@
+sentence = input("Enter a sentence: ").lower()
+print(' '.join(word.capitalize() if word.startswith('a') else word for word in sentence.split()))
