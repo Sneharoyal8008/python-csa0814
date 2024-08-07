@@ -1,0 +1,10 @@
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
+
+date1 = datetime.strptime(input("Enter the first date (YYYY-MM-DD): "), "%Y-%m-%d")
+date2 = datetime.strptime(input("Enter the second date (YYYY-MM-DD): "), "%Y-%m-%d")
+delta = relativedelta(date2, date1)
+
+print(f"Days: {(date2 - date1).days}")
+print(f"Months: {delta.months + delta.years * 12}")
+print(f"Years: {delta.years}")
