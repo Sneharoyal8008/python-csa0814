@@ -1,0 +1,14 @@
+import math
+
+def is_perfect_square(n):
+    if n < 0:
+        return False  # Negative numbers are not perfect squares
+    root = math.isqrt(n)  # Integer square root of the number
+    return root * root == n
+
+# Example usage
+number = 16
+if is_perfect_square(number):
+    print(f"{number} is a perfect square.")
+else:
+    print(f"{number} is not a perfect square.")
