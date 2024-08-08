@@ -1,0 +1,15 @@
+def is_automorphic(n):
+    # Calculate the square of the number
+    square = n * n
+    # Convert both the original number and its square to strings
+    n_str = str(n)
+    square_str = str(square)
+    # Check if the string representation of the square ends with the string representation of the number
+    return square_str.endswith(n_str)
+
+# Example usage
+number = 76
+if is_automorphic(number):
+    print(f"{number} is an automorphic number.")
+else:
+    print(f"{number} is not an automorphic number.")
