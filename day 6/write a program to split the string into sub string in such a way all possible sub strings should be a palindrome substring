@@ -1,0 +1,27 @@
+def is_palindrome(s):
+    return s == s[::-1]
+
+def partition_palindromes(s):
+    def backtrack(start, path):
+        if start == len(s):
+            result.append(path[:])
+            return
+        
+        for end in range(start + 1, len(s) + 1):
+            substring = s[start:end]
+            if is_palindrome(substring):
+                path.append(substring)
+                backtrack(end, path)
+                path.pop()
+    
+    result = []
+    backtrack(0, [])
+    return result
+
+# Test the function
+string = "aab"
+partitions = partition_palindromes(string)
+
+print("All possible partitions where each substring is a palindrome:")
+for partition in partitions:
+    print(partition)
