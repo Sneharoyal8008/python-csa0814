@@ -1,0 +1,21 @@
+def encode_message(message, shift):
+    # Define the alphabet
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    alphabet_length = len(alphabet)
+    
+    # Create a dictionary to map each letter to its encoded version
+    shift = shift % alphabet_length  # Handle shifts larger than the alphabet length
+    encoding_dict = {char: alphabet[(idx + shift) % alphabet_length] for idx, char in enumerate(alphabet)}
+    
+    # Encode the message
+    encoded_message = ''.join(encoding_dict.get(char.lower(), char) for char in message)
+    
+    return encoded_message
+
+# Test the function
+message = "Hello, World!"
+shift = 3
+
+encoded = encode_message(message, shift)
+print(f"Original message: {message}")
+print(f"Encoded message: {encoded}")
