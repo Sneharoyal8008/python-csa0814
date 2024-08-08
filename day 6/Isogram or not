@@ -1,0 +1,23 @@
+def is_isogram(sentence):
+    # Convert sentence to lowercase to ensure case insensitivity
+    sentence = sentence.lower()
+    
+    # Remove spaces and non-alphabetic characters
+    filtered_sentence = ''.join(char for char in sentence if char.isalpha())
+    
+    # Create a set to track seen characters
+    seen_characters = set()
+    
+    for char in filtered_sentence:
+        if char in seen_characters:
+            return False
+        seen_characters.add(char)
+    
+    return True
+
+# Test the function
+sentence = "Dermatoglyphics"  # Example sentence
+print(is_isogram(sentence))  # Output: True
+
+sentence = "Hello World"  # Example sentence
+print(is_isogram(sentence))  # Output: False
