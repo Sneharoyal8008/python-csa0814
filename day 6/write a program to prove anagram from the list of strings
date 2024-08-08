@@ -1,0 +1,36 @@
+def are_anagrams(str1, str2):
+    # Convert both strings to lowercase to ensure case insensitivity
+    str1 = str1.lower()
+    str2 = str2.lower()
+    
+    # Remove non-alphabetic characters if you want to handle phrases
+    str1 = ''.join(char for char in str1 if char.isalpha())
+    str2 = ''.join(char for char in str2 if char.isalpha())
+    
+    # Check if sorted characters of both strings are equal
+    return sorted(str1) == sorted(str2)
+
+def find_anagram_pairs(strings):
+    # Create a list to store pairs of anagrams
+    anagram_pairs = []
+    
+    # Compare each string with every other string in the list
+    for i in range(len(strings)):
+        for j in range(i + 1, len(strings)):
+            if are_anagrams(strings[i], strings[j]):
+                anagram_pairs.append((strings[i], strings[j]))
+    
+    return anagram_pairs
+
+# Test the function
+string_list = ["Listen", "Silent", "Hello", "Oleh", "The Morse Code", "Here come dots"]
+
+anagram_pairs = find_anagram_pairs(string_list)
+
+# Display results
+if anagram_pairs:
+    print("Anagram pairs found:")
+    for pair in anagram_pairs:
+        print(f"- {pair[0]} and {pair[1]}")
+else:
+    print("No anagram pairs found.")
