@@ -1,0 +1,22 @@
+def are_anagrams(str1, str2):
+    # Convert both strings to lowercase to ensure case insensitivity
+    str1 = str1.lower()
+    str2 = str2.lower()
+    
+    # Remove non-alphabetic characters if you want to handle phrases
+    str1 = ''.join(char for char in str1 if char.isalpha())
+    str2 = ''.join(char for char in str2 if char.isalpha())
+    
+    # Check if sorted characters of both strings are equal
+    return sorted(str1) == sorted(str2)
+
+# Test the function
+string1 = "Listen"
+string2 = "Silent"
+
+print(f"Are '{string1}' and '{string2}' anagrams?: {are_anagrams(string1, string2)}")  
+
+string1 = "Hello"
+string2 = "World"
+
+print(f"Are '{string1}' and '{string2}' anagrams?: {are_anagrams(string1, string2)}") 
