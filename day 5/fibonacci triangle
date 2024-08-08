@@ -1,0 +1,19 @@
+def generate_fibonacci(n):
+    fib_seq = [0, 1]
+    while len(fib_seq) < n * (n + 1) // 2:
+        fib_seq.append(fib_seq[-1] + fib_seq[-2])
+    return fib_seq
+
+def print_fibonacci_triangle(rows):
+    fib_seq = generate_fibonacci(rows)
+    index = 0
+    
+    for i in range(1, rows + 1):
+        for j in range(i):
+            print(fib_seq[index], end=' ')
+            index += 1
+        print()
+
+# Example usage
+rows = 5
+print_fibonacci_triangle(rows)
