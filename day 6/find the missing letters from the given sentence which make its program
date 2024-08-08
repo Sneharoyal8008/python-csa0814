@@ -1,0 +1,24 @@
+import string
+
+def find_missing_letters(sentence):
+    # Convert the sentence to lowercase to ensure case insensitivity
+    sentence = sentence.lower()
+    
+    # Create a set of all alphabet letters
+    alphabet_set = set(string.ascii_lowercase)
+    
+    # Create a set of letters in the sentence
+    sentence_set = set(char for char in sentence if char in alphabet_set)
+    
+    # Find the missing letters by subtracting the sentence set from the alphabet set
+    missing_letters = alphabet_set - sentence_set
+    
+    # Return the missing letters sorted as a string
+    return ''.join(sorted(missing_letters))
+
+# Test the function
+sentence = "The quick brown fox jumps over the lazy do"  # Example sentence
+print("Missing letters:", find_missing_letters(sentence))  # Output: 'a'
+
+sentence = "The quick brown fox jumps over the lazy dog"  # Example sentence
+print("Missing letters:", find_missing_letters(sentence))  # Output: '' (empty string, meaning no letters are missing)
