@@ -1,0 +1,15 @@
+def print_hollow_square(n):
+    # Loop through each row
+    for i in range(n):
+        # Loop through each column
+        for j in range(n):
+            # Print '*' at the borders or the first and last row/column
+            if i == 0 or i == n - 1 or j == 0 or j == n - 1:
+                print('*', end='')
+            else:
+                print(' ', end='')
+        print()  # Move to the next line after printing a row
+
+# Example usage
+size = 5
+print_hollow_square(size)
