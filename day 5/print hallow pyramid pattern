@@ -1,0 +1,20 @@
+def print_hollow_pyramid(n):
+    for i in range(n):
+        # Print leading spaces
+        print(' ' * (n - i - 1), end='')
+        
+        # Print the hollow pyramid pattern
+        for j in range(2 * i + 1):
+            if j == 0 or j == 2 * i or i == n - 1:
+                # Print '*' at the boundaries and at the last row
+                print('*', end='')
+            else:
+                # Print spaces inside the pyramid
+                print(' ', end='')
+        
+        # Move to the next line after each row
+        print()
+
+# Example usage
+height = 5
+print_hollow_pyramid(height)
