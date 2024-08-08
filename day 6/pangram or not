@@ -1,0 +1,21 @@
+import string
+
+def is_pangram(sentence):
+    # Convert the sentence to lowercase to ensure case insensitivity
+    sentence = sentence.lower()
+    
+    # Create a set of all alphabet letters
+    alphabet_set = set(string.ascii_lowercase)
+    
+    # Create a set of letters in the sentence
+    sentence_set = set(char for char in sentence if char in alphabet_set)
+    
+    # Check if the sentence set contains all letters of the alphabet
+    return sentence_set == alphabet_set
+
+# Test the function
+sentence1 = "The quick brown fox jumps over the lazy dog"  # Example sentence
+print(is_pangram(sentence1))  # Output: True
+
+sentence2 = "Hello World"  # Example sentence
+print(is_pangram(sentence2))  # Output: False
