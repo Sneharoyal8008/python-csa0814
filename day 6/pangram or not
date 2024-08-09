@@ -14,8 +14,8 @@ def is_pangram(sentence):
     return sentence_set == alphabet_set
 
 # Test the function
-sentence1 = "The quick brown fox jumps over the lazy dog"  # Example sentence
-print(is_pangram(sentence1))  # Output: True
+sentence1 = "The quick brown fox jumps over the lazy dog"  
+print(is_pangram(sentence1))  
 
-sentence2 = "Hello World"  # Example sentence
-print(is_pangram(sentence2))  # Output: False
+sentence2 = "Hello World"  
+print(is_pangram(sentence2))  
