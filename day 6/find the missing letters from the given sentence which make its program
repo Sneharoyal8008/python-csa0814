@@ -17,8 +17,8 @@ def find_missing_letters(sentence):
     return ''.join(sorted(missing_letters))
 
 # Test the function
-sentence = "The quick brown fox jumps over the lazy do"  # Example sentence
-print("Missing letters:", find_missing_letters(sentence))  # Output: 'a'
+sentence = "The quick brown fox jumps over the lazy do"  
+print("Missing letters:", find_missing_letters(sentence))  
 
-sentence = "The quick brown fox jumps over the lazy dog"  # Example sentence
-print("Missing letters:", find_missing_letters(sentence))  # Output: '' (empty string, meaning no letters are missing)
+sentence = "The quick brown fox jumps over the lazy dog"  
+print("Missing letters:", find_missing_letters(sentence))  
