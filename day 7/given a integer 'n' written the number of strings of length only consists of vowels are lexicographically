@@ -1,0 +1,78 @@
+from itertools import product
+
+def generate_vowel_strings(n):
+    vowels = 'aeiou'
+    # Generate all combinations of length n with the given vowels
+    result = [''.join(p) for p in product(vowels, repeat=n)]
+    return result
+
+# Example usage
+n = 3  # Example length of strings
+strings = generate_vowel_strings(n)
+for s in strings:
+    print(s)
+
+#output
+aaa
+aae
+aai
+aao
+aau
+aea
+eee
+eei
+eeo
+eee
+eai
+eao
+eau
+eia
+eie
+eii
+eio
+eiu
+eoa
+eoe
+eoi
+eoo
+eou
+eua
+eue
+eui
+euo
+euu
+iaa
+iae
+iai
+iao
+iau
+iea
+iee
+iei
+ieo
+ieu
+ioa
+ioe
+ioi
+ioo
+iou
+uaa
+uae
+uai
+uao
+uau
+uea
+uee
+uei
+ueo
+ueu
+uia
+uie
+uii
+uio
+uiu
+uaa
+uee
+uii
+uio
+uiu
