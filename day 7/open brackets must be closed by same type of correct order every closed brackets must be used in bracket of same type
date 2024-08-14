@@ -1,0 +1,31 @@
+def generate_bracket_combinations(n):
+    def backtrack(s, open_p, open_s, open_c):
+        if len(s) == 2 * n * 3:
+            if open_p == open_s == open_c == 0:
+                result.append(s)
+            return
+        if open_p > 0: backtrack(s + '(', open_p - 1, open_s, open_c)
+        if s.count('(') > s.count(')'): backtrack(s + ')', open_p, open_s, open_c)
+        if open_s > 0: backtrack(s + '[', open_p, open_s - 1, open_c)
+        if s.count('[') > s.count(']'): backtrack(s + ']', open_p, open_s, open_c)
+        if open_c > 0: backtrack(s + '{', open_p, open_s, open_c - 1)
+        if s.count('{') > s.count('}'): backtrack(s + '}', open_p, open_s, open_c)
+
+    result = []
+    backtrack('', n, n, n)
+    return result
+
+
+n = 2  
+combinations = generate_bracket_combinations(n)
+for combo in combinations:
+    print(combo)
+
+#output
+(()[]{})([])
+((){}[])({})
+([](){})([])
+([]{}())({})
+([]{}(){})(())
+({}[]())(())
+({})[]()(())
