@@ -1,0 +1,11 @@
+def find_first_occurrence(needle, haystack):
+    return haystack.find(needle)
+
+# Example usage
+needle = "NEEDLE"
+haystack = "HASHTAG"
+index = find_first_occurrence(needle, haystack)
+print(index)  
+
+#output
+-1
