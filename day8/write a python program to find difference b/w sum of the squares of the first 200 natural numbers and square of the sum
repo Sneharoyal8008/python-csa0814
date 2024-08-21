@@ -1,0 +1,16 @@
+n = 200
+
+# Calculate the sum of the squares
+sum_squares = n * (n + 1) * (2 * n + 1) // 6
+
+# Calculate the square of the sum
+sum_n = n * (n + 1) // 2
+square_sum = sum_n * sum_n
+
+# Compute the difference
+difference = square_sum - sum_squares
+
+print(difference)
+
+#output
+377176500
