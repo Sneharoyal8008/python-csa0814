@@ -1,9 +1,0 @@
-from itertools import product
-letter_dict = {'1': ('a', 'b'), '2': ('c', 'd')}
-print('\n'.join(''.join(combo) for combo in product(*letter_dict.values())))
-
-#output
-ac
-ad
-bc
-bd
