@@ -10,7 +10,7 @@ print("Left Aligned:\n", left)
 print("Right Aligned:\n", right)
 
 #output
-Enter a sentence:  sai ramsai ram
+Enter a sentence:  sai ram
 Left Aligned:
  sai ram                                           
 Right Aligned:
