@@ -1,0 +1,17 @@
+def replace_chars(s):
+    freq = {char: s.count(char) for char in set(s)}
+    
+    def replace_char(c):
+        if c.isalpha():
+            base = ord('A') if c.isupper() else ord('a')
+            new_char = chr((ord(c) - base + freq[c.lower()]) % 26 + base)
+            return new_char
+        return c
+    
+    return ''.join(replace_char(c) for c in s)
+
+str = "ghee"
+print("Modified string:", replace_chars(str))
+
+OUTPUT:
+Modified string: higg
